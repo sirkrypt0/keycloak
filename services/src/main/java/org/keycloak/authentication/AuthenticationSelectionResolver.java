@@ -208,7 +208,7 @@ class AuthenticationSelectionResolver {
             FormAuthenticatorFactory factory = (FormAuthenticatorFactory) processor.getSession().getKeycloakSessionFactory().getProviderFactory(FormAuthenticator.class, requiredExecution.getAuthenticator());
 
             // Recursively add credentials from required execution
-            if (requiredExecution.isAuthenticatorFlow() && factory == null) {
+            if (requiredExecution.isAuthenticatorFlow()) {
                 return addAllExecutionsFromSubflow(processor, requiredExecution.getFlowId(), typeAuthExecMap, nonCredentialExecutions);
             } else {
                 addSimpleAuthenticationExecution(processor, requiredExecution, typeAuthExecMap, nonCredentialExecutions);

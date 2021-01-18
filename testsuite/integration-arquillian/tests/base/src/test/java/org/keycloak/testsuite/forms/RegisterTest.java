@@ -601,7 +601,7 @@ public class RegisterTest extends AbstractTestRealmKeycloakTest {
     @Test
     public void customRegistrationPageFormTest() {
         String newFlowAlias = "register - custom";
-        configureRegistrationFlowWithCustomRegistrationPageForm(newFlowAlias);
+        // configureRegistrationFlowWithCustomRegistrationPageForm(newFlowAlias);
 
         loginPage.open();
         loginPage.clickRegister();
